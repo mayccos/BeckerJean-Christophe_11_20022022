@@ -1,0 +1,23 @@
+@import '../../utils/style/colors';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+
+    &__link {
+        color: $primary-color;
+        text-decoration: none;
+        font-size: 24px;
+        margin-left: 57px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
+    &__img {
+        height: 68px;
+    }
+}
