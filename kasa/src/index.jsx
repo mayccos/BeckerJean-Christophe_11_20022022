@@ -3,17 +3,21 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 import reportWebVitals from './reportWebVitals'
 import Header from './Components/Header'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Footer from './Components/Footer'
+import Housing from './Pages/Housing'
+import Error from './Pages/Error'
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
             <Header />
-
-            <Home />
-
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route path="/housing/:id" element={<Housing />} />
+                <Route path="/*" element={<Error />} />
+            </Routes>
             <Footer />
         </Router>
     </React.StrictMode>,

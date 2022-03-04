@@ -1,7 +1,7 @@
 import './Housing.scss'
 import { useParams } from 'react-router-dom'
-import { GetDataHousingById } from '../../service/api'
-import Loader from '../../components/Loader'
+import { GetDataHousingById } from '../../Api'
+import Loader from '../../Components/Loader'
 
 function Housing() {
     const { id } = useParams()

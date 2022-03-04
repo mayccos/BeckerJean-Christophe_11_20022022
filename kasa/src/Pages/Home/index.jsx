@@ -1,14 +1,15 @@
-import Loader from '../../Components/Loader/index.jsx'
-import Banner from '../../Components/Banner.jsx/index.jsx'
+import Loader from '../../Components/Loader'
+import Banner from '../../Components/Banner'
 import { Link } from 'react-router-dom'
-import { GetAllDataHousing } from '../../Api/index.jsx'
-import Thumb from '../../Components/Thumb/index.jsx'
+import { GetAllDataHousing } from '../../Api'
+import Thumb from '../../Components/Thumb'
 import './Home.scss'
 
 function Home() {
     const { data, isLoading, error } = GetAllDataHousing(
-        'http://localhost:8080/housing'
+        '../../__Mocks__/Data.json'
     )
+    console.log(data)
     const slogan = 'Chez vous, partout et ailleurs'
     const image = '../../Assets/BannerHome.png'
     const housing = data

@@ -1,10 +1,18 @@
-@import '../../utils/style/colors';
+@import '../../utils/style/colors.scss';
+@import '../../utils/style/mediaQuery.scss';
 
 .banner {
     position: relative;
     border-radius: 10px;
     margin: 20px 0;
-    height: 223px;
+    height: 111px;
+    @include media-query(medium) {
+        height: 167px;
+    }
+    @include media-query(large) {
+        height: 223px;
+    }
+
     &__img {
         border-radius: inherit;
         object-fit: cover;
@@ -25,7 +33,7 @@
     &__text {
         position: absolute;
         top: 0;
-        font-size: 48px;
+        font-size: 24px;
         color: $white;
         font-weight: 500;
         margin: 0;
@@ -36,5 +44,12 @@
         align-items: center;
         box-sizing: border-box;
         justify-content: center;
+        @include media-query(medium) {
+            font-size: 36px;
+            justify-content: center;
+        }
+        @include media-query(large) {
+            font-size: 48px;
+        }
     }
 }
