@@ -1,11 +1,13 @@
 import './Thumb.scss'
-
-function Thumb({ image, title }) {
+import { Link } from 'react-router-dom'
+function Thumb({ id, cover, title }) {
     return (
-        <div className="thumb">
-            <img src={image} alt="" className="thumb__img" />
-            <div className="thumb__overlay"></div>
-            <h2 className="thumb__title">{title}</h2>
+        <div className="thumb" key={id}>
+            <Link to={`housing/${id}`}>
+                <img src={cover} alt={title} className="thumb_img" />
+                <div className="thumb__overlay"></div>
+                <h2 className="thumb__title">{title}</h2>
+            </Link>
         </div>
     )
 }

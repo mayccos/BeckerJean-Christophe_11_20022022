@@ -4,7 +4,7 @@
 .home {
     margin: 0 5%;
 
-    &__housing--wrapper {
+    &__wrapper {
         @include media-query(medium) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

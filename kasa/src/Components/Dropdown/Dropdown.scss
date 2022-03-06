@@ -1,0 +1,47 @@
+@import '../../utils/style/colors';
+@import '../../utils/style/mediaQuery';
+
+.dropdown {
+    width: 100%;
+    background-color: $light-grey;
+    font-size: 13px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    @include media-query(medium) {
+        font-size: 15px;
+    }
+    @include media-query(large) {
+        font-size: 18px;
+    }
+    &__top {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        background-color: $primary-color;
+        border-radius: 5px;
+        @include media-query(small) {
+            height: 38px;
+        }
+        @include media-query(medium) {
+            height: 46px;
+            border-radius: 10px;
+        }
+        @include media-query(xlarge) {
+            height: 52px;
+        }
+    }
+    &__title,
+    &__icon {
+        margin: 2%;
+    }
+    &__content {
+        width: 90%;
+        color: $primary-color;
+        font-weight: 400;
+        margin: 2%;
+    }
+}
