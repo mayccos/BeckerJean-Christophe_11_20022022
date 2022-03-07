@@ -1,5 +1,6 @@
 import './Carrousel.scss'
 import { useState } from 'react'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 const Carrousel = ({ pictures }) => {
     const [current, setCurrent] = useState(0)
@@ -40,18 +41,10 @@ const Carrousel = ({ pictures }) => {
             {picturesLength > 1 ? (
                 <>
                     <div className="carrousel__previous" onClick={goPrevious}>
-                        <img
-                            src="/arrow-down.svg"
-                            alt=""
-                            className="carrousel__previous-icon"
-                        />
+                        <FaChevronLeft className="carrousel__previous-icon" />
                     </div>
                     <div className="carrousel__next" onClick={goNext}>
-                        <img
-                            src="/arrow-down.svg"
-                            alt=""
-                            className="carrousel__next-icon"
-                        />
+                        <FaChevronRight className="carrousel__next-icon" />
                     </div>
                 </>
             ) : null}

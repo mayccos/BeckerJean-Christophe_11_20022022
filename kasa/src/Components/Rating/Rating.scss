@@ -1,0 +1,23 @@
+@import '../../utils/style/mediaQuery';
+@import '../../utils/style/colors';
+.rating {
+    display: flex;
+    align-items: center;
+    &__greyIcon {
+        color: $star-grey;
+    }
+    &__redIcon {
+        color: $primary-color;
+    }
+    &__greyIcon,
+    &__redIcon {
+        margin-right: 5px;
+        font-size: 15px;
+        @include media-query(medium) {
+            font-size: 24px;
+        }
+        @include media-query(large) {
+            font-size: 30px;
+        }
+    }
+}

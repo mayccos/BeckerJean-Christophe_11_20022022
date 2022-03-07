@@ -1,25 +1,21 @@
 import './Rating.scss'
-
+import { VscStarFull } from 'react-icons/vsc'
 function Rating({ rating }) {
     const rates = [1, 2, 3, 4, 5]
 
     return (
         <div className="rating">
             {/* Loop to display star by rating */}
-            {rates.map((ratesElem) =>
-                rating >= ratesElem ? (
-                    <img
-                        key={ratesElem.toString()}
-                        className="rating__icon"
-                        src="/star.svg"
-                        alt=""
+            {rates.map((number) =>
+                rating >= number ? (
+                    <VscStarFull
+                        key={number.toString()}
+                        className="rating__redIcon"
                     />
                 ) : (
-                    <img
-                        key={ratesElem.toString()}
-                        className="rating__icon"
-                        src="/greyStar.svg"
-                        alt=""
+                    <VscStarFull
+                        key={number.toString()}
+                        className="rating__greyIcon"
                     />
                 )
             )}

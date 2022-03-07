@@ -1,6 +1,8 @@
 import './Apropos.scss'
+import '../../utils/style/_mediaQuery.scss'
 import Banner from '../../Components/Banner'
 import BannerAbout from '../../Assets/BannerAbout.png'
+import BannerAboutSmall from '../../Assets/BannerAboutSmall.png'
 import Dropdown from '../../Components/Dropdown'
 
 const comments = [
@@ -10,10 +12,12 @@ const comments = [
     "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
 ]
 
+const image = window.screen.width <= '576' ? BannerAboutSmall : BannerAbout
+console.log(image)
 function About() {
     return (
         <div className="about">
-            <Banner image={BannerAbout} />
+            <Banner image={image} />
             <div className="about__content">
                 <Dropdown title="Fiabilité" textContent={comments[0]} />
                 <Dropdown title="Respect" textContent={comments[1]} />
