@@ -11,7 +11,7 @@ import { useHousingById } from '../../Api'
 function Housing() {
     const { id } = useParams()
     const { data, isLoading, error } = useHousingById(
-        `../../_mocks_/Data.json`,
+        `https://github.com/mayccos/BeckerJean-Christophe_11_20022022/blob/main/kasa/src/_mocks_/Data.json`,
         id
     )
 

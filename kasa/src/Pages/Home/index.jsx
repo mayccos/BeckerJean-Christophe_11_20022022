@@ -7,7 +7,9 @@ import Loader from '../../Components/Loader'
 import './Home.scss'
 
 function Home() {
-    const { data, isLoading, error } = useAllHousing(`../../_mocks_/Data.json`)
+    const { data, isLoading, error } = useAllHousing(
+        `https://github.com/mayccos/BeckerJean-Christophe_11_20022022/blob/main/kasa/src/_mocks_/Data.json`
+    )
 
     const { housing } = data
     const slogan = 'Chez vous, partout et ailleurs'
