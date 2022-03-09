@@ -2,6 +2,7 @@ import Banner from '../../Components/Banner'
 import BannerHome from '../../Assets/BannerHome.png'
 import { data } from '../../Data/Data'
 import Thumb from '../../Components/Thumb'
+
 import './Home.scss'
 
 function Home() {
