@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export function GetAllDataHousing(url) {
+export function useAllHousing(url) {
     const [isDataLoading, setDataLoading] = useState(false)
     const [error, setError] = useState(null)
     const [data, setData] = useState({})
@@ -27,7 +27,7 @@ export function GetAllDataHousing(url) {
     return { isDataLoading, error, data }
 }
 
-export function GetDataHousingById(url, id) {
+export function useHousingById(url, id) {
     const [isDataLoading, setDataLoading] = useState(false)
     const [data, setData] = useState({})
 
