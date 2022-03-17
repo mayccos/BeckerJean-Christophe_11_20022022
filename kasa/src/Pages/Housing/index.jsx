@@ -11,12 +11,12 @@ import { useHousingById } from '../../Api'
 function Housing() {
     const { id } = useParams()
     const { data, isLoading, error } = useHousingById(
-        `https://github.com/mayccos/BeckerJean-Christophe_11_20022022/blob/main/kasa/src/_mocks_/Data.json`,
+        `https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json`,
         id
     )
 
     const { housing } = data
-    console.log(housing)
+
     if (error) {
         return <span>Oups il y a eu un problème</span>
     }
