@@ -11,7 +11,7 @@ function Housing() {
     const urlParams = useParams()
 
     const housing = data.find((data) => data.id === urlParams.id)
-
+    console.log(housing)
     return (
         <div className="housing">
             <Carrousel pictures={housing.pictures} />
